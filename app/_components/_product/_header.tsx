@@ -1,6 +1,8 @@
+import { validateData } from "@/app/libs";
 import React from "react";
 import { BiSolidUpArrow } from "react-icons/bi";
-function Header() {
+function Header(props: any) {
+  let data = props.data;
   return (
     <div className="flex justify-between items-center px-4">
       <div className=" flex items-center">
@@ -12,16 +14,30 @@ function Header() {
           />
         </div>
         <div>
-          <h1 className="text-xl font-bold">APPLE INC</h1>
-          <span className="text-xm font-medium">AAPL, Common Stock</span>
+          <h1 className="text-xl font-bold">{validateData(data.ticker)}</h1>
+          <span className="text-xm font-medium">{props.AssetType}</span>
         </div>
       </div>
       <div className="flex justify-end">
         <div className="flex flex-col">
-          <span className="text-black text-lg font-sans">$177.15</span>
-          <span className="text-green-700 flex items-center my-2">
-            +0.91 <BiSolidUpArrow className="text-sm ml-2" />
+          <span className="text-black text-lg font-sans">
+            ${validateData(data.price)}
           </span>
+          {data?.change_percentage?.includes("-") ? (
+            <>
+              <span className="text-red-700 flex items-center my-2">
+                {data.change_percentage}{" "}
+                <BiSolidUpArrow className="text-sm rotate-180 ml-2" />
+              </span>
+            </>
+          ) : (
+            <>
+              <span className="text-green-700 flex items-center my-2">
+                +{data.change_percentage}{" "}
+                <BiSolidUpArrow className="text-sm ml-2" />
+              </span>
+            </>
+          )}
         </div>
       </div>
     </div>

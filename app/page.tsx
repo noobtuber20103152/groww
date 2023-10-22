@@ -10,8 +10,8 @@ export default function Home() {
   };
   return (
     <>
-      <Navbar />
-      <div className="max-w-6xl font-sans  my-10 md:px-0 px-4 mx-auto">
+      {/* <Navbar />
+      <div className="max-w-6xl font-sans  my-10 px-4 mx-auto">
         <div className="flex">
           <div
             className={`${
@@ -39,7 +39,7 @@ export default function Home() {
           </div>
         </div>
         {gainOrLose ? <TopGainer /> : <TopLosers />}
-      </div>
+      </div> */}
     </>
   );
 }

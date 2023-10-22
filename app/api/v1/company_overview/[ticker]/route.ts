@@ -4,12 +4,11 @@ import { NextRequest, NextResponse } from "next/server";
 export async function GET(request: NextRequest, context: any) {
   try {
     let { ticker } = context.params;
-    console.log(COMPANY_OVERVIEW + ticker);
     let data: any = await fetch(COMPANY_OVERVIEW + ticker, {
       method: "GET",
     });
     data = await data.json();
-    console.log(data);
+    // console.log(data);
     return NextResponse.json(data);
   } catch (error: any) {
     return NextResponse.json({ msg: error.message });

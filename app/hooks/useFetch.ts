@@ -1,7 +1,8 @@
+"use client";
 import { useState, useEffect } from "react";
 const useFetch = (url: string) => {
-  const [data, setData] = useState<any>(null);
-  const [loading, setLoading] = useState<any>(false);
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<any>(null);
   useEffect(() => {
     const fetchData = async () => {

@@ -24,15 +24,15 @@ function Card(props: TOP_GAINER__LOSER_INTERFACE) {
         </p>
         <span
           className={`flex ${
-            !props.change_amount.includes("-")
+            !props.change_percentage.includes("-")
               ? "text-green-600"
               : "text-red-500"
           } items-center`}
         >
-          {props.change_amount}{" "}
+          {props.change_percentage}{" "}
           <BiSolidUpArrow
             className={`${
-              !props.change_amount.includes("-") ? "" : "rotate-180"
+              !props.change_percentage.includes("-") ? "" : "rotate-180"
             } h-4 ml-2`}
           />
         </span>
