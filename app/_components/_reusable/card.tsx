@@ -6,7 +6,7 @@ import { TOP_GAINER__LOSER_INTERFACE } from "@/app/_interfaces";
 function Card(props: TOP_GAINER__LOSER_INTERFACE) {
   return (
     <>
-      <div className="max-w-sm p-3 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col items-start">
+      <div className="max-w-sm p-3  border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 flex flex-col items-start">
         <div className="p-2 border rounded-full">
           <img
             className="h-10"
@@ -15,13 +15,11 @@ function Card(props: TOP_GAINER__LOSER_INTERFACE) {
           />
         </div>
         <Link href={`/stock/${props.ticker}`}>
-          <h5 className="mb-2 text-lg font-semibold tracking-tight text-gray-900 dark:text-white">
+          <h5 className="mb-2 text-lg font-semibold tracking-tight dark:text-white">
             {props.ticker}
           </h5>
         </Link>
-        <p className="mb-3 font-normal text-black dark:text-gray-400">
-          ${props.price}
-        </p>
+        <p className="mb-3 font-normal  dark:text-gray-400">${props.price}</p>
         <span
           className={`flex ${
             !props.change_percentage.includes("-")

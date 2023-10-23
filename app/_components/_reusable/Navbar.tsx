@@ -8,7 +8,7 @@ import { BsFillLightningFill } from "react-icons/bs";
 import { clearTimeout, setTimeout } from "timers";
 export default function Navbar() {
   const [search, setSearch] = useState("");
-  const [searchData, setSearchData] = useState<any>();
+  const [searchData, setSearchData] = useState<any>([]);
   const [typingStatus, setTypingStatus] = useState("Not typing");
   let typingTimer: any;
 
@@ -35,7 +35,7 @@ export default function Navbar() {
   }, [typingStatus]);
   return (
     <>
-      <div className="bg-yellow-700">
+      <div className="bg-yellow-700 dark:bg-[#333333]">
         <nav className="py-2 w-full  lg:max-w-6xl p px-0 mx-auto font-sans md:px-2">
           <div className=" flex lg:flex-row  flex-col items-start lg:items-center w-full px-5 justify-between">
             <Link href="/">
@@ -46,7 +46,7 @@ export default function Navbar() {
             </Link>
             <div
               className={`w-full lg:mt-0 mt-4 lg:w-8/12 flex   items-center bg-yellow-900 ${
-                search.length ? "rounded-t-xl" : "rounded-xl"
+                search.length ? "rounded-t-3xl" : "rounded-3xl"
               } `}
             >
               <div className="w-full ">
@@ -88,14 +88,13 @@ export default function Navbar() {
                         </button>
                       </div>
                       <ul
-                        className={`bg-yellow-900 w-full absolute rounded-b-xl top-[4.5rem]  mt-2`}
+                        className={`bg-yellow-900 w-full absolute rounded-b-3xl top-[4.5rem]  mt-2`}
                       >
-                        {searchData?.map((e: any) => {
-                          console.log(e["1. symbol"]);
+                        {searchData?.map((e: any, index:number) => {
                           return (
                             <>
                               <Link href={`/stock/${e["1. symbol"]}`}>
-                                <li className="pl-4 border-b border-yellow-700 pr-2 py-1 text-white w-full bg-transparent relative cursor-pointer ">
+                                <li className={`pl-4 border-white  border-b pr-2 py-1 text-white w-full bg-transparent relative cursor-pointer `}>
                                   {e["2. name"]}
                                   <br />
                                   <span className="text-sm text-yellow-500">

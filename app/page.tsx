@@ -20,7 +20,7 @@ export default function Home() {
           >
             <button
               onClick={() => handleChange(true)}
-              className="text-xl text-black"
+              className="text-xl  dark:text-white"
             >
               Top Gainers
             </button>
@@ -32,7 +32,7 @@ export default function Home() {
           >
             <button
               onClick={() => handleChange(false)}
-              className="text-xl text-black"
+              className="text-xl "
             >
               Top Losers
             </button>

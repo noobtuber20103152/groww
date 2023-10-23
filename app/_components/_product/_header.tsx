@@ -20,7 +20,7 @@ function Header(props: any) {
       </div>
       <div className="flex justify-end">
         <div className="flex flex-col">
-          <span className="text-black text-lg font-sans">
+          <span className=" text-lg font-sans">
             ${validateData(data.price)}
           </span>
           {data?.change_percentage?.includes("-") ? (

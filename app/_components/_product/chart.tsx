@@ -12,6 +12,7 @@ import {
   Legend,
 } from "chart.js";
 import { generateData } from "@/app/libs";
+import { useTheme } from "next-themes";
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -22,6 +23,7 @@ ChartJS.register(
   Legend
 );
 function ChartGraph() {
+  const { theme, setTheme } = useTheme();
   let generate: any = generateData();
   const data: any = {
     labels: generate.labels,
@@ -29,13 +31,12 @@ function ChartGraph() {
       {
         label: "Stock Price",
         data: generate.data,
-        borderColor: "black",
+        borderColor: theme === "light" ? "black" : "white",
         fill: false,
       },
     ],
   };
 
- 
   var options = {
     scales: {
       x: {

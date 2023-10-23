@@ -27,8 +27,6 @@ function generateData() {
     currentDate.setDate(startDate.getDate() + i);
     const formattedDate = currentDate.toISOString().slice(0, 10);
     labels.push(formattedDate);
-    // console.log(formattedDate);
-    // console.log(getRandomFloat(5, 10, 2));
     data.push(getRandomFloat(5, 10, 100));
   }
 
