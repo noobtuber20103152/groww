@@ -9,7 +9,7 @@ function Header(props: any) {
         <div className="p-2 border rounded-full mr-4 lg:mr-8 overflow-hidden">
           <img
             className="w-20 lg:w-32"
-            src="https://pbs.twimg.com/profile_images/1605297940242669568/q8-vPggS_400x400.jpg"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1200px-Google_%22G%22_Logo.svg.png"
             alt=""
           />
         </div>
