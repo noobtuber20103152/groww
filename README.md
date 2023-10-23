@@ -5,43 +5,52 @@
 
 
 This Next.js web app is a user-friendly platform for stock and ETF trading. It features an Explore page where users can easily check top gainers and losers. Each stock/ETF has a dedicated Product Page displaying basic info and price trends. The app offers a hassle-free search bar, suggesting stocks as users type. It's designed for both beginners and experienced investors, making stock market navigation simple and accessible, empowering users to make smart investment choices.
-## Acknowledgements
-
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
-
 
 ## API Reference
 
-#### Get all items
+#### Get all top gainers
 
 ```http
-  GET /api/items
+  GET /api/v1/top_gainer
 ```
 
 | Parameter | Type     | Description                |
 | :-------- | :------- | :------------------------- |
 | `api_key` | `string` | **Required**. Your API key |
 
-#### Get item
+#### Get all top losers
 
 ```http
-  GET /api/items/${id}
+  GET /api/v1/top_loser
 ```
 
 | Parameter | Type     | Description                       |
 | :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Required**. Id of item to fetch |
+| `api_key`      | `string` | **Required**. Your API key|
 
-#### add(num1, num2)
+#### Get all search results
 
-Takes two numbers and returns the sum.
+```http
+  GET /api/v1/search
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `api_key`      | `string` | **Required**. Your API key|
 
 
-## Appendix
+#### Get company overview
 
-Any additional information goes here
+```http
+  GET /api/v1/company_overview/{id}
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `api_key`      | `string` | **Required**. Your API key|
+| `id`      | `string` | **Required**. Id of item to fetch|
+
+
 
 ## Color Reference
 
@@ -53,27 +62,13 @@ Any additional information goes here
 | Example Color | ![#00d1a0](https://via.placeholder.com/10/00b48a?text=+) #00d1a0 |
 
 
-## Contributing
-
-Contributions are always welcome!
-
-See `contributing.md` for ways to get started.
-
-Please adhere to this project's `code of conduct`.
 
 
 ## 🚀 About Me
 I'm a full stack developer...
 
 
-## Installation
 
-Install my-project with npm
-
-```bash
-  npm install my-project
-  cd my-project
-```
     
 ## Screenshots
 
