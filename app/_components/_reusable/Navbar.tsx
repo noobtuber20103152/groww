@@ -78,13 +78,13 @@ export default function Navbar() {
                     <>
                       <div className="w-full px-4 absolute bg-yellow-900 py-2  top-10">
                         <button className="bg-yellow-700 text-white  text-xs font-medium mr-2 px-2.5 py-0.5 rounded-lg">
-                          Yellow
+                          All
                         </button>
                         <button className="bg-yellow-700 text-white  text-xs font-medium mr-2 px-2.5 py-0.5 rounded-lg">
-                          Yellow
+                          Stocks
                         </button>
                         <button className="bg-yellow-700 text-white  text-xs font-medium mr-2 px-2.5 py-0.5 rounded-lg">
-                          Yellow
+                          Etfs
                         </button>
                       </div>
                       <ul

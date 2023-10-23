@@ -3,7 +3,6 @@ import React from "react";
 import { BiSolidUpArrow } from "react-icons/bi";
 function About(props: any) {
   let data = props.data;
-  console.log(data);
   return (
     <>
       <div className="border rounded-2xl my-5 ">
@@ -12,7 +11,6 @@ function About(props: any) {
         </div>
         <div className="p-5">
           <p>{validateData(data.Description)}</p>
-
           <div className="my-2 flex  flex-wrap">
             <span className="bg-yellow-500  my-2 text-yellow-800 text-lg font-medium mr-2  rounded-xl px-4 py-1">
               Industry: {validateData(data.Industry)}
